@@ -1,0 +1,51 @@
+<!--
+	Homework #4
+	index.html
+	Gardner Wilkenfeld
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- JQuery UI setup -->
+		<link href="http://code.jquery.com/ui/1.9.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	 	<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	 	<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+	 	<script src="https://raw.github.com/jquery/jquery-tmpl/master/jquery.tmpl.js"></script>
+
+		<script type = "text/javascript" src = "script.js"></script>
+		<link rel = "stylesheet" type = "text/css" href = "style.css" />
+	</head>
+	<body>
+		<div id = "main">
+			<h1>Flickr SlideShow</h1>
+			<div id = "search">
+				<div id = "searchInput">
+					<form id = "searchForm" name = "searchForm" action = "JavaScript:flickrSearch()">
+						<label id = "searchLabel" for = "searchLabel">Search:</label>
+						<input type = "text" id = "searchField" name = "searchField">
+					</form>
+				</div>
+			</div>
+			<div id = "results">
+				<ul id = "resultsList" class = "gallery"></ul>
+			</div>
+			<div id = "selectedTitle">Slide Show Images</div>
+			<div id = "selected">
+				<ul id = "selectedList" class = "gallery"></ul>
+			</div>
+			<div id = "buttons">
+				<form id = "selectedForm" name = "selectedForm"></form>
+			</div>
+		</div>
+
+		<div id = "slideShow"></div>
+
+		<script>
+			loadSearchSubmitButton();
+			loadClearAllButton();
+			loadLaunchButton();
+			dropHandler();
+		</script>
+	</body>
+</html>
